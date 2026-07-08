@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shaikh Hyder Ali Ahmed — OSINT Investigations &amp; Protective Intelligence</title>
+<meta name="description" content="Shaikh Hyder Ali Ahmed — Senior Intelligence Manager. OSINT, financial-crime and behavioral-threat investigations protecting executives, brands and capital across the Middle East, North America and South &amp; South-East Asia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="pilot-root">
+
+  <div id="progress"></div>
+
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="orb orb-1" data-orb data-depth="42" data-amp="34" data-phase="0" data-speed="0.00022"></div>
+    <div class="orb orb-2" data-orb data-depth="72" data-amp="46" data-phase="2" data-speed="0.00017"></div>
+    <div class="orb orb-3" data-orb data-depth="28" data-amp="30" data-phase="4" data-speed="0.00026"></div>
+  </div>
+  <div id="spotlight" aria-hidden="true"></div>
+  <div class="hud-fx" aria-hidden="true">
+    <div class="hud-scan"></div>
+    <div class="hud-sweep"></div>
+    <div class="hud-corner tl"></div>
+    <div class="hud-corner tr"></div>
+    <div class="hud-corner bl"></div>
+    <div class="hud-corner br"></div>
+  </div>
+
+  <div id="cur-ring">
+    <span class="n"></span><span class="s"></span><span class="w"></span><span class="e"></span>
+  </div>
+  <div id="cur-dot"></div>
+  <div class="cur-trail" data-trail style="width:5px;height:5px"></div>
+  <div class="cur-trail" data-trail style="width:5px;height:5px"></div>
+  <div class="cur-trail" data-trail style="width:4px;height:4px;background:var(--violet)"></div>
+  <div class="cur-trail" data-trail style="width:4px;height:4px;background:var(--violet)"></div>
+  <div class="cur-trail" data-trail style="width:3px;height:3px;background:var(--cyan)"></div>
+  <div class="cur-trail" data-trail style="width:3px;height:3px;background:var(--cyan)"></div>
+
+  <div id="loader">
+    <div class="loader-tag mono tl">SESSION // SHA-PORTFOLIO</div>
+    <div class="loader-tag mono tr">ENCRYPTION // AES-256</div>
+    <div class="loader-tag mono bl">APAC-NODE &middot; 17.3850&deg;N 78.4867&deg;E</div>
+    <div class="loader-tag mono br">CLR: CONFIDENTIAL</div>
+    <div class="loader-ring">
+      <div class="o1"></div>
+      <div class="o2"></div>
+      <div class="o3"></div>
+      <div class="v"></div>
+      <div class="h"></div>
+      <div class="mark mono">SH</div>
+    </div>
+    <div class="loader-label mono">Establishing secure session</div>
+    <div class="loader-bar"><div class="loader-bar-fill" data-load-bar></div></div>
+    <div class="loader-pct mono"><span data-load-num>000</span><span class="u"> %</span></div>
+  </div>
+
+  <header id="nav">
+    <a href="#hero" data-scroll-to="hero" data-cursor="hover" class="nav-brand">
+      <span class="brand-mark mono">SH</span>
+    </a>
+    <nav id="nav-links">
+      <a href="#about" data-scroll-to="about" data-navlink="about" data-cursor="hover" class="nav-link">Profile<span class="nav-underline" data-underline></span></a>
+      <a href="#experience" data-scroll-to="experience" data-navlink="experience" data-cursor="hover" class="nav-link">Experience<span class="nav-underline" data-underline></span></a>
+      <a href="#cases" data-scroll-to="cases" data-navlink="cases" data-cursor="hover" class="nav-link">Cases<span class="nav-underline" data-underline></span></a>
+      <a href="#pilot" data-scroll-to="pilot" data-navlink="pilot" data-cursor="hover" class="nav-link">PILOT V23<span class="nav-underline" data-underline></span></a>
+      <a href="#resume" data-scroll-to="resume" data-navlink="resume" data-cursor="hover" class="nav-link">R&eacute;sum&eacute;<span class="nav-underline" data-underline></span></a>
+    </nav>
+    <div class="nav-cta-wrap">
+      <a href="#contact" data-scroll-to="contact" data-cursor="hover" data-magnetic class="btn-cta">Get in touch</a>
+      <button data-menu-toggle aria-label="Menu" data-cursor="hover" class="menu-toggle"><span class="bars"></span></button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" data-menu data-open="0">
+    <a href="#about" data-scroll-to="about" data-cursor="hover">Profile</a>
+    <a href="#experience" data-scroll-to="experience" data-cursor="hover">Experience</a>
+    <a href="#cases" data-scroll-to="cases" data-cursor="hover">Cases</a>
+    <a href="#pilot" data-scroll-to="pilot" data-cursor="hover">PILOT V23</a>
+    <a href="#resume" data-scroll-to="resume" data-cursor="hover">R&eacute;sum&eacute;</a>
+    <a href="#contact" data-scroll-to="contact" data-cursor="hover">Contact</a>
+  </div>
+
+  <div id="hud-telemetry" class="mono" aria-hidden="true">
+    <span>SYS: NOMINAL &middot; <span id="hud-clock">--:--:--</span> UTC</span>
+    <span style="color:var(--muted)">SHA // PROTECTIVE INTELLIGENCE</span>
+    <span>THREAT DESK: <span style="color:#3ddc84">ACTIVE</span></span>
+  </div>
+
+  <main id="main">
+
+    <section id="hero">
+      <div id="hero-grid">
+        <div>
+          <div data-hero-in class="hero-pill mono">
+            <span class="dot-live"></span>
+            SHAIKH HYDER ALI AHMED
+            <span class="pill-sep"></span>
+            INVESTIGATIONS &middot; PROTECTIVE INTELLIGENCE
+          </div>
+          <h1 class="hero-title">
+            <span data-hero-in data-parallax data-depth="16">Every threat</span>
+            <span data-hero-in data-parallax data-depth="9">leaves a trail.</span>
+            <span data-hero-in data-parallax data-depth="26" class="grad">I follow it.</span>
+          </h1>
+          <p data-hero-in class="hero-lede">
+            Senior Intelligence Manager and investigator. I run OSINT, financial-crime and behavioral-threat investigations that protect executives, brands and capital &mdash; across the Middle East, North America and South &amp; South-East Asia.
+          </p>
+          <div data-hero-in class="hero-actions">
+            <a href="#cases" data-scroll-to="cases" data-cursor="hover" data-magnetic class="btn-primary">View the case files <span class="mono">&rarr;</span></a>
+            <a href="assets/docs/Shaikh-Hyder-Ali-Ahmed-Resume.pdf" download data-resume data-cursor="hover" data-magnetic class="btn-ghost">Download r&eacute;sum&eacute; <span class="mono">&darr;</span></a>
+          </div>
+          <div id="stat-row" data-hero-in>
+            <div><div class="stat-num">05+</div><div class="stat-label mono">YEARS IN FIELD</div></div>
+            <div><div class="stat-num">5+</div><div class="stat-label mono">CLIENT DESKS LED</div></div>
+            <div><div class="stat-num grad">CIATW</div><div class="stat-label mono">ASIS-ALIGNED</div></div>
+            <div><div class="stat-num">3</div><div class="stat-label mono">REGIONS COVERED</div></div>
+          </div>
+        </div>
+
+        <div id="hero-media" data-hero-in data-parallax data-depth="20">
+          <div class="hero-card">
+            <div class="hero-badge mono"><span class="dot-live" style="width:6px;height:6px"></span>AVAILABILITY // OPEN</div>
+            <div class="hero-shot-frame">
+              <img src="assets/images/headshot-white.png" alt="Portrait of Shaikh Hyder Ali Ahmed">
+              <div class="hero-shot-gradient" aria-hidden="true"></div>
+              <div class="frame-corner tl" aria-hidden="true"></div>
+              <div class="frame-corner tr" aria-hidden="true"></div>
+              <div class="frame-corner bl" aria-hidden="true"></div>
+              <div class="frame-corner br" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="hero-float-card">
+            <div class="hero-float-tag mono"><span class="dot-live" style="width:6px;height:6px;background:var(--accent);box-shadow:0 0 8px var(--accent)"></span>MULTI-REGION DESK</div>
+            <div class="hero-float-status">Monitoring &mdash; <span style="color:var(--cyan)">LIVE</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll mono">SCROLL<span></span></div>
+    </section>
+
+    <section id="about" data-screen-label="About">
+      <div class="wrap" style="position:relative">
+        <div aria-hidden="true" class="section-num-bg mono">01</div>
+        <div data-reveal class="eyebrow">
+          <span class="eyebrow-num mono">01</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">PROFILE</span>
+        </div>
+        <div class="about-grid">
+          <div data-reveal>
+            <h2 class="about-heading">Most security is reactive. <span class="muted">Mine starts before the first signal.</span></h2>
+            <div class="tag-row">
+              <span class="tag-pill mono">GSOC</span>
+              <span class="tag-pill mono">INCIDENT RESPONSE</span>
+              <span class="tag-pill mono">EXECUTIVE ESCALATIONS</span>
+              <span class="tag-pill mono">BUSINESS CONTINUITY</span>
+            </div>
+          </div>
+          <div data-reveal data-reveal-delay="120" class="about-copy">
+            <p>I'm a Senior Intelligence Manager with 5+ years protecting executive leadership, brands and capital through proactive, anticipatory threat detection and intelligence-driven investigations.</p>
+            <p>I design the investigation workflows my team runs, and I'm the single point of contact who briefs the client and owns the intelligence for their account &mdash; a role I've held across 5+ client portfolios spanning corporate security, financial crime, OSINT and behavioral threat assessment.</p>
+            <p>My coverage runs across the Middle East, North America and South &amp; South-East Asia, translating ambiguous open-source signals into decisions leadership can act on &mdash; coordinated with incident-response, GSOC and executive-escalation channels.</p>
+            <div class="about-facts">
+              <div class="about-fact"><div class="about-fact-label mono">BASED IN</div><div class="about-fact-value">Hyderabad, India</div></div>
+              <div class="about-fact"><div class="about-fact-label mono">REGIONS</div><div class="about-fact-value">ME &middot; N. America &middot; S/SE Asia</div></div>
+              <div class="about-fact"><div class="about-fact-label mono">ROLE</div><div class="about-fact-value">Senior Intelligence Manager</div></div>
+              <div class="about-fact"><div class="about-fact-label mono">CLEARANCE</div><div class="about-fact-value">Confidential handling</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" data-screen-label="Capabilities">
+      <div class="wrap">
+        <div data-reveal class="eyebrow">
+          <span class="eyebrow-num mono">02</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">CAPABILITIES</span>
+        </div>
+        <h2 data-reveal class="section-title">A full-spectrum intelligence toolkit — from raw signal to executive decision.</h2>
+        <div class="card-grid">
+          <div data-reveal data-cursor="hover" class="cap-card">
+            <div class="cap-card-top"><span class="cap-code mono">C-01</span><span class="cap-icon" style="color:var(--accent)">◎</span></div>
+            <h3>Executive Security Intelligence</h3>
+            <p>Collecting, analysing and visualising threat data to detect, assess and respond to risk against executives, employees, assets and operations.</p>
+            <div class="chip-row"><span class="chip mono">POI management</span><span class="chip mono">Digital footprint</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="70" data-cursor="hover" class="cap-card">
+            <div class="cap-card-top"><span class="cap-code mono">C-02</span><span class="cap-icon" style="color:var(--cyan)">⌖</span></div>
+            <h3>OSINT &amp; Research</h3>
+            <p>Data mining, link analysis, image analysis, data-breach checks, metadata analysis and deep web reconnaissance with advanced Boolean tradecraft.</p>
+            <div class="chip-row"><span class="chip mono">Link analysis</span><span class="chip mono">Metadata</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="140" data-cursor="hover" class="cap-card">
+            <div class="cap-card-top"><span class="cap-code mono">C-03</span><span class="cap-icon" style="color:var(--violet)">◈</span></div>
+            <h3>Geopolitical Risk Analysis</h3>
+            <p>Global events monitoring, threat assessment and client vulnerability assessment across volatile regions — including MENA and the Southern Caucasus.</p>
+            <div class="chip-row"><span class="chip mono">Events monitoring</span><span class="chip mono">Vulnerability</span></div>
+          </div>
+          <div data-reveal data-cursor="hover" class="cap-card">
+            <div class="cap-card-top"><span class="cap-code mono">C-04</span><span class="cap-icon" style="color:var(--cyan)">⬡</span></div>
+            <h3>Due Diligence &amp; Vetting</h3>
+            <p>Risk-based due diligence, executive vetting and reputational-risk intelligence, aligned with global best practice for firms and principals.</p>
+            <div class="chip-row"><span class="chip mono">Background checks</span><span class="chip mono">Reputational</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="70" data-cursor="hover" class="cap-card">
+            <div class="cap-card-top"><span class="cap-code mono">C-05</span><span class="cap-icon" style="color:var(--accent)">▤</span></div>
+            <h3>Reporting &amp; Data Visualisation</h3>
+            <p>Producing executive-level intelligence reports, interpreting complex data and building visualisations — increasingly accelerated with AI models.</p>
+            <div class="chip-row"><span class="chip mono">Exec briefings</span><span class="chip mono">AI-assisted</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="140" data-cursor="hover" class="cap-card">
+            <div class="cap-card-top"><span class="cap-code mono">C-06</span><span class="cap-icon" style="color:var(--violet)">⣿</span></div>
+            <h3>Team &amp; Project Leadership</h3>
+            <p>Designing and running independent projects to tight deadlines, allocating resources, and training junior analysts in advanced OSINT and imagery tradecraft.</p>
+            <div class="chip-row"><span class="chip mono">Mentoring</span><span class="chip mono">Incident coord</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" data-screen-label="Tools">
+      <div class="wrap">
+        <div data-reveal class="eyebrow">
+          <span class="eyebrow-num mono">03</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">TOOLS I WORK WITH</span>
+        </div>
+        <div data-reveal class="tools-header">
+          <h2>The tools I work with.</h2>
+          <p>The specialist platforms I've worked with day to day &mdash; orchestrated into one investigative workflow.</p>
+        </div>
+        <div class="tools-grid">
+          <div data-reveal data-cursor="hover" class="tool-card">
+            <div class="tool-card-top"><span class="tool-cat mono" style="color:var(--accent)">THREAT &amp; CASE MGMT</span><span class="tool-idx mono">02</span></div>
+            <div class="tool-row"><span class="tool-name">ONTIC</span><span class="tool-desc mono">Case mgmt &middot; pre-incident</span></div>
+            <div class="tool-row"><span class="tool-name">WavR21</span><span class="tool-desc mono">WPV judgement</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="70" data-cursor="hover" class="tool-card">
+            <div class="tool-card-top"><span class="tool-cat mono" style="color:var(--cyan)">MONITORING &amp; ALERTING</span><span class="tool-idx mono">03</span></div>
+            <div class="tool-row"><span class="tool-name">Dataminr</span><span class="tool-desc mono">Real-time alerting</span></div>
+            <div class="tool-row"><span class="tool-name">LifeRaft</span><span class="tool-desc mono">Fringe / deep-web</span></div>
+            <div class="tool-row"><span class="tool-name">Meltwater</span><span class="tool-desc mono">Media &amp; brand</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="140" data-cursor="hover" class="tool-card">
+            <div class="tool-card-top"><span class="tool-cat mono" style="color:var(--violet)">PEOPLE &amp; ASSET TRACING</span><span class="tool-idx mono">03</span></div>
+            <div class="tool-row"><span class="tool-name">TLOxp</span><span class="tool-desc mono">People &amp; asset tracing</span></div>
+            <div class="tool-row"><span class="tool-name">Pipl</span><span class="tool-desc mono">Identity resolution</span></div>
+            <div class="tool-row"><span class="tool-name">RocketReach</span><span class="tool-desc mono">Contact enrichment</span></div>
+          </div>
+          <div data-reveal data-cursor="hover" class="tool-card">
+            <div class="tool-card-top"><span class="tool-cat mono" style="color:var(--accent)">LEGAL INTELLIGENCE</span><span class="tool-idx mono">US &middot; IN</span></div>
+            <div class="tool-row"><span class="tool-name">PACER &middot; LexisNexis</span><span class="tool-desc mono">US court records</span></div>
+            <div class="tool-row"><span class="tool-name">Unicourt</span><span class="tool-desc mono">Litigation tracking</span></div>
+            <div class="tool-row"><span class="tool-name">E-Courts (India)</span><span class="tool-desc mono">Offender search</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="70" data-cursor="hover" class="tool-card">
+            <div class="tool-card-top"><span class="tool-cat mono" style="color:var(--cyan)">RESEARCH &amp; ENRICHMENT</span><span class="tool-idx mono">03</span></div>
+            <div class="tool-row"><span class="tool-name">Lampyre</span><span class="tool-desc mono">Data analysis</span></div>
+            <div class="tool-row"><span class="tool-name">Google Dorks</span><span class="tool-desc mono">Web recon</span></div>
+            <div class="tool-row"><span class="tool-name">Boolean tradecraft</span><span class="tool-desc mono">Advanced search</span></div>
+          </div>
+          <div data-reveal data-reveal-delay="140" class="tool-highlight">
+            <div class="tool-highlight-num">15+</div>
+            <p>specialist platforms unified into one pay-as-you-use workflow — the problem <a href="#pilot" data-scroll-to="pilot" data-cursor="hover">PILOT&nbsp;V23</a> was built to solve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pilot" data-screen-label="PILOT V23">
+      <div class="wrap">
+        <div data-reveal class="eyebrow" style="margin-bottom:26px">
+          <span class="eyebrow-num mono">04</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">FLAGSHIP &middot; CASE STUDY</span>
+        </div>
+        <div class="pilot-head">
+          <div data-reveal>
+            <div class="pilot-title-row">
+              <span class="pilot-mark mono">P23</span>
+              <div>
+                <h2>PILOT V23</h2>
+                <div class="pilot-subtag mono">DESIGNED &amp; BUILT SINGLE-HANDEDLY</div>
+              </div>
+            </div>
+            <p>Every investigation runs on two things &mdash; a sprawl of specialist tools, and a graveyard of Excel trackers holding the key facts of each case. PILOT V23 replaces both.</p>
+            <p>It's the operations layer for protective intelligence: decide which tool actually earns its cost, keep tight control of spend, and get a clean, reliable record that audits every task &mdash; so the insight we produce is answerable. I designed and built it single-handedly, pouring in everything I've learned on the desk.</p>
+          </div>
+          <div data-reveal data-reveal-delay="120" class="pilot-panels">
+            <div class="pilot-panel problem">
+              <div class="pilot-panel-label mono">THE PROBLEM</div>
+              <p>A dozen disconnected tools and a pile of Excel trackers. No clean way to decide which tool earns its cost, control spend, or keep managers in the loop.</p>
+            </div>
+            <div class="pilot-panel solution">
+              <div class="pilot-panel-label mono">THE SOLUTION</div>
+              <p>One workspace that seeds every tool's API, bills pay-as-you-use, and audits each task &mdash; clean management, and answerable insight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pilot-feature-grid">
+          <div data-reveal data-cursor="hover" class="pilot-feature">
+            <div class="pilot-feature-num mono">01</div>
+            <h3>One console, every source</h3>
+            <p>15+ vendor APIs seeded into a single investigative surface — no more tab-sprawl.</p>
+          </div>
+          <div data-reveal data-reveal-delay="70" data-cursor="hover" class="pilot-feature">
+            <div class="pilot-feature-num mono">02</div>
+            <h3>Pay-as-you-use</h3>
+            <p>Token-metered access — pay only for the queries you actually run, per tool.</p>
+          </div>
+          <div data-reveal data-reveal-delay="140" data-cursor="hover" class="pilot-feature">
+            <div class="pilot-feature-num mono">03</div>
+            <h3>AI &amp; Operations Audit</h3>
+            <p>Every task attributed &mdash; which analyst, which model, how many tokens, what cost. The audit is what makes each insight answerable.</p>
+          </div>
+          <div data-reveal data-reveal-delay="210" data-cursor="hover" class="pilot-feature">
+            <div class="pilot-feature-num mono">04</div>
+            <h3>Project management, built in</h3>
+            <p>Retires the Excel-tracker graveyard &mdash; every case's tasks, owners and live status on one board leadership can watch.</p>
+          </div>
+        </div>
+
+        <div data-reveal class="wf-toolbar">
+          <div class="wf-toolbar-label"><span class="mono">WIREFRAMES</span><span class="wf-badge mono">LO-FI &middot; BLUEPRINT</span></div>
+          <div class="wf-tabs">
+            <button data-wf="dash" data-cursor="hover" class="wf-tab mono active">Dashboard</button>
+            <button data-wf="osint" data-cursor="hover" class="wf-tab mono">OSINT</button>
+            <button data-wf="threat" data-cursor="hover" class="wf-tab mono">Threat Monitor</button>
+            <button data-wf="audit" data-cursor="hover" class="wf-tab mono">Ops &amp; AI Audit</button>
+          </div>
+        </div>
+
+        <div data-reveal class="wf-window">
+          <div class="wf-titlebar">
+            <div class="wf-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="wf-titletext mono">PILOT V23 &middot; <span data-wf-title>Command Dashboard</span></div>
+            <div class="wf-titlebar-right"><span class="wf-kbd mono">⌘K</span><span class="wf-avatar"></span></div>
+          </div>
+          <div id="wf-body">
+            <div id="wf-rail">
+              <div class="wf-rail-brand"><span class="pilot-mark mono" style="width:26px;height:26px;font-size:10px;border-radius:7px">P23</span><span class="mono">PILOT V23</span></div>
+              <div data-rail="dash" data-cursor="hover" class="wf-rail-item active"><span>◧</span>Dashboard</div>
+              <div data-rail="osint" data-cursor="hover" class="wf-rail-item"><span>⌖</span>Investigations</div>
+              <div data-rail="threat" data-cursor="hover" class="wf-rail-item"><span>◈</span>Threat Monitor</div>
+              <div class="wf-rail-item disabled"><span>▲</span>Incidents</div>
+              <div class="wf-rail-item disabled"><span>⬡</span>Risk</div>
+              <div data-rail="audit" data-cursor="hover" class="wf-rail-item"><span>▤</span>Audit</div>
+              <div class="wf-token">
+                <div class="wf-token-label mono">TOKEN BALANCE</div>
+                <div class="wf-token-bar"><div class="wf-token-bar-fill"></div></div>
+                <div class="wf-token-val mono">42,180<span> tok</span></div>
+              </div>
+            </div>
+            <div class="wf-stage">
+
+              <div data-wf-screen="dash" class="wf-screen active">
+                <div class="wf-row-between">
+                  <div class="mono">MULTI-REGION DESK &middot; <span style="color:var(--cyan)">LIVE</span></div>
+                  <div class="wf-tagset"><span class="wf-tagchip mono on">SPEND TODAY &middot; $318</span><span class="wf-tagchip mono off">AI AUDIT ✓</span></div>
+                </div>
+                <div class="wf-kpi">
+                  <div class="wf-kpi-card"><div class="wf-kpi-label mono">ACTIVE INVESTIGATIONS</div><div class="wf-kpi-value">12</div><div class="wf-kpi-bar" style="width:62%;background:rgba(47,107,255,.5)"></div></div>
+                  <div class="wf-kpi-card"><div class="wf-kpi-label mono">OPEN INCIDENTS</div><div class="wf-kpi-value">03</div><div class="wf-kpi-bar" style="width:30%;background:rgba(255,122,89,.6)"></div></div>
+                  <div class="wf-kpi-card"><div class="wf-kpi-label mono">THREAT LEVEL</div><div class="wf-kpi-value sm" style="color:#febc2e">ELEVATED</div><div class="wf-kpi-bar" style="width:72%;background:rgba(254,188,46,.55)"></div></div>
+                  <div class="wf-kpi-card"><div class="wf-kpi-label mono">POIS TRACKED</div><div class="wf-kpi-value">47</div><div class="wf-kpi-bar" style="width:48%;background:rgba(34,211,238,.55)"></div></div>
+                </div>
+                <div class="wf-split">
+                  <div class="wf-panel">
+                    <div class="wf-panel-head mono"><span>LIVE THREAT FEED</span><span style="color:var(--faint)">Dataminr &middot; LifeRaft</span></div>
+                    <div class="wf-feed-row"><span class="wf-feed-dot" style="background:#ff5f57"></span><div class="wf-feed-bars"><div style="height:7px;width:66%"></div><div style="height:5px;width:38%"></div></div><span class="wf-feed-time mono">02:14</span></div>
+                    <div class="wf-feed-row"><span class="wf-feed-dot" style="background:#febc2e"></span><div class="wf-feed-bars"><div style="height:7px;width:54%"></div><div style="height:5px;width:44%"></div></div><span class="wf-feed-time mono">01:58</span></div>
+                    <div class="wf-feed-row"><span class="wf-feed-dot" style="background:#28c840"></span><div class="wf-feed-bars"><div style="height:7px;width:72%"></div><div style="height:5px;width:30%"></div></div><span class="wf-feed-time mono">01:31</span></div>
+                    <div class="wf-feed-row"><span class="wf-feed-dot" style="background:#febc2e"></span><div class="wf-feed-bars"><div style="height:7px;width:60%"></div><div style="height:5px;width:34%"></div></div><span class="wf-feed-time mono">00:47</span></div>
+                  </div>
+                  <div class="wf-panel cyan">
+                    <div class="wf-panel-head mono" style="color:var(--cyan)"><span>TEAM ACTIVITY &middot; LIVE</span></div>
+                    <div class="wf-team-row"><span class="wf-team-avatar" style="background:rgba(47,107,255,.3)"></span><div style="flex:1"><div class="wf-team-name mono">A. Rao</div><div class="wf-team-bar" style="width:70%;background:rgba(47,107,255,.5)"></div></div><span class="wf-team-delta mono">+120</span></div>
+                    <div class="wf-team-row"><span class="wf-team-avatar" style="background:rgba(139,92,246,.3)"></span><div style="flex:1"><div class="wf-team-name mono">S. Kaur</div><div class="wf-team-bar" style="width:45%;background:rgba(139,92,246,.5)"></div></div><span class="wf-team-delta mono">+80</span></div>
+                    <div class="wf-team-row"><span class="wf-team-avatar" style="background:rgba(34,211,238,.3)"></span><div style="flex:1"><div class="wf-team-name mono">M. Iqbal</div><div class="wf-team-bar" style="width:88%;background:rgba(34,211,238,.5)"></div></div><span class="wf-team-delta mono">+210</span></div>
+                  </div>
+                </div>
+                <div class="wf-panel">
+                  <div class="wf-panel-head mono"><span>TOKEN USAGE BY TOOL &middot; 7D</span><span style="color:var(--faint)">tokens</span></div>
+                  <div class="wf-usage-chart">
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:58%;background:linear-gradient(var(--accent),rgba(47,107,255,.2))"></div><span class="wf-usage-label mono">ONTIC</span></div>
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:88%;background:linear-gradient(var(--cyan),rgba(34,211,238,.2))"></div><span class="wf-usage-label mono">TLOxp</span></div>
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:40%;background:linear-gradient(var(--violet),rgba(139,92,246,.2))"></div><span class="wf-usage-label mono">Pipl</span></div>
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:70%;background:linear-gradient(var(--accent),rgba(47,107,255,.2))"></div><span class="wf-usage-label mono">Dataminr</span></div>
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:52%;background:linear-gradient(var(--cyan),rgba(34,211,238,.2))"></div><span class="wf-usage-label mono">LifeRaft</span></div>
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:33%;background:linear-gradient(var(--violet),rgba(139,92,246,.2))"></div><span class="wf-usage-label mono">Lampyre</span></div>
+                    <div class="wf-usage-col"><div class="wf-usage-bar" style="height:46%;background:linear-gradient(var(--accent),rgba(47,107,255,.2))"></div><span class="wf-usage-label mono">Meltwtr</span></div>
+                  </div>
+                </div>
+                <div class="wf-callout mono" style="top:64px;right:20px;border:1px solid rgba(34,211,238,.45)"><span class="wf-callout-num" style="background:var(--cyan);color:#04121a">1</span><span style="color:var(--cyan)">Live task updates for PMs</span></div>
+              </div>
+
+              <div data-wf-screen="osint" class="wf-screen">
+                <div class="wf-row-between">
+                  <div class="mono">SUBJECT #4471 &middot; <span style="color:var(--cyan)">ACTIVE</span></div>
+                  <div class="wf-tagset">
+                    <span class="wf-tagchip mono on">TLOxp ✓</span>
+                    <span class="wf-tagchip mono on">Pipl ✓</span>
+                    <span class="wf-tagchip mono off">LifeRaft</span>
+                    <span class="wf-tagchip mono on">Dataminr ✓</span>
+                  </div>
+                </div>
+                <div class="wf-split" style="grid-template-columns:1.5fr 1fr">
+                  <div class="wf-panel cyan">
+                    <div class="wf-panel-head mono" style="color:var(--cyan);margin-bottom:8px">LINK ANALYSIS CANVAS</div>
+                    <svg viewBox="0 0 520 250" style="width:100%;height:auto;display:block">
+                      <g stroke="rgba(34,211,238,.35)" stroke-width="1">
+                        <line x1="260" y1="125" x2="112" y2="52"></line>
+                        <line x1="260" y1="125" x2="416" y2="56"></line>
+                        <line x1="260" y1="125" x2="80" y2="188"></line>
+                        <line x1="260" y1="125" x2="442" y2="186"></line>
+                        <line x1="260" y1="125" x2="262" y2="222"></line>
+                        <line x1="112" y1="52" x2="416" y2="56" stroke="rgba(255,255,255,.08)"></line>
+                      </g>
+                      <g font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#8C97AE">
+                        <circle cx="260" cy="125" r="26" fill="rgba(47,107,255,.2)" stroke="#2F6BFF" stroke-width="1.5"></circle>
+                        <text x="260" y="128" text-anchor="middle" fill="#EAF0FA" font-size="9">SUBJECT</text>
+                        <circle cx="112" cy="52" r="17" fill="#0d1322" stroke="rgba(34,211,238,.5)"></circle>
+                        <text x="112" y="82" text-anchor="middle">EMAIL</text>
+                        <circle cx="416" cy="56" r="17" fill="#0d1322" stroke="rgba(34,211,238,.5)"></circle>
+                        <text x="416" y="86" text-anchor="middle">PHONE</text>
+                        <circle cx="80" cy="188" r="17" fill="#0d1322" stroke="rgba(139,92,246,.5)"></circle>
+                        <text x="80" y="218" text-anchor="middle">ALIAS</text>
+                        <circle cx="442" cy="186" r="17" fill="#0d1322" stroke="rgba(139,92,246,.5)"></circle>
+                        <text x="442" y="216" text-anchor="middle">ADDRESS</text>
+                        <circle cx="262" cy="222" r="17" fill="#0d1322" stroke="rgba(34,211,238,.5)"></circle>
+                        <text x="262" y="252" text-anchor="middle">SOCIAL</text>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div class="wf-panel">
+                      <div class="wf-panel-head mono" style="margin-bottom:10px">FINDINGS</div>
+                      <div class="wf-findings">
+                        <div style="width:82%;background:rgba(255,255,255,.12)"></div>
+                        <div style="width:64%;background:rgba(255,255,255,.09)"></div>
+                        <div style="width:73%;background:rgba(255,255,255,.09)"></div>
+                        <div style="width:50%;background:rgba(255,255,255,.06)"></div>
+                      </div>
+                    </div>
+                    <div class="wf-panel" style="border-color:rgba(47,107,255,.3);background:rgba(47,107,255,.05)">
+                      <div class="wf-panel-head mono" style="color:var(--accent);margin-bottom:10px">TOOL RUN &middot; TOKEN COST</div>
+                      <div class="wf-cost-row mono"><span style="color:var(--ink)">TLOxp query</span><span style="color:var(--cyan)">120 tok</span></div>
+                      <div class="wf-cost-row mono"><span style="color:var(--ink)">Pipl resolve</span><span style="color:var(--cyan)">80 tok</span></div>
+                      <div class="wf-cost-row mono"><span style="color:var(--ink)">Dataminr scan</span><span style="color:var(--cyan)">65 tok</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wf-callout mono" style="top:60px;left:20px;border:1px solid rgba(34,211,238,.45)"><span class="wf-callout-num" style="background:var(--cyan);color:#04121a">1</span><span style="color:var(--cyan)">One query, many sources</span></div>
+                <div class="wf-callout mono" style="bottom:24px;right:20px;border:1px solid rgba(47,107,255,.5)"><span class="wf-callout-num" style="background:var(--accent);color:#fff">2</span><span style="color:var(--accent)">Per-query token cost inline</span></div>
+              </div>
+
+              <div data-wf-screen="threat" class="wf-screen">
+                <div class="wf-row-between">
+                  <div class="mono">PREDICTIVE THREAT CAPTURE</div>
+                  <div class="wf-region-tabs"><span class="wf-tagchip mono on">APAC</span><span class="wf-tagchip mono off">EMEA</span><span class="wf-tagchip mono off">AMER</span></div>
+                </div>
+                <div class="wf-split" style="grid-template-columns:1.5fr 1fr">
+                  <div class="wf-map">
+                    <div class="wf-map-dots"></div>
+                    <div class="wf-map-label mono">GLOBAL EVENTS MAP</div>
+                    <span class="wf-map-pin" style="left:28%;top:44%;width:10px;height:10px;background:#ff5f57;box-shadow:0 0 0 5px rgba(255,95,87,.18)"></span>
+                    <span class="wf-map-pin" style="left:62%;top:38%;width:9px;height:9px;background:#febc2e;box-shadow:0 0 0 5px rgba(254,188,46,.16)"></span>
+                    <span class="wf-map-pin" style="left:48%;top:62%;width:9px;height:9px;background:#22D3EE;box-shadow:0 0 0 5px rgba(34,211,238,.16)"></span>
+                    <span class="wf-map-pin" style="left:75%;top:66%;width:8px;height:8px;background:#28c840;box-shadow:0 0 0 4px rgba(40,200,64,.16)"></span>
+                    <div class="wf-map-foot mono">APAC &middot; 3 ACTIVE &middot; 1 PREDICTED</div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div class="wf-panel" style="border-color:rgba(47,107,255,.3);background:rgba(47,107,255,.05)">
+                      <div class="wf-panel-head mono" style="color:var(--accent);margin-bottom:8px">PREDICTED RISK SCORE</div>
+                      <div class="wf-risk-score"><span class="n">72</span><span class="t mono">▲ ELEVATED</span></div>
+                      <div class="wf-token-bar" style="margin-top:10px"><div class="wf-token-bar-fill" style="width:72%;background:linear-gradient(90deg,var(--accent),#febc2e)"></div></div>
+                    </div>
+                    <div class="wf-panel">
+                      <div class="wf-panel-head mono" style="margin-bottom:10px">REAL-TIME ALERTS</div>
+                      <div class="wf-alert-row"><span class="wf-alert-dot" style="background:#ff5f57"></span><div class="wf-alert-bar" style="width:100%"></div><span class="wf-alert-time mono">now</span></div>
+                      <div class="wf-alert-row"><span class="wf-alert-dot" style="background:#febc2e"></span><div class="wf-alert-bar" style="width:100%;background:rgba(255,255,255,.08)"></div><span class="wf-alert-time mono">3m</span></div>
+                      <div class="wf-alert-row"><span class="wf-alert-dot" style="background:#22D3EE"></span><div class="wf-alert-bar" style="width:100%;background:rgba(255,255,255,.08)"></div><span class="wf-alert-time mono">11m</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wf-callout mono" style="bottom:24px;left:20px;border:1px solid rgba(34,211,238,.45)"><span class="wf-callout-num" style="background:var(--cyan);color:#04121a">1</span><span style="color:var(--cyan)">Real-time global monitoring</span></div>
+                <div class="wf-callout mono" style="top:60px;right:20px;border:1px solid rgba(47,107,255,.5)"><span class="wf-callout-num" style="background:var(--accent);color:#fff">2</span><span style="color:var(--accent)">Predictive risk scoring</span></div>
+              </div>
+
+              <div data-wf-screen="audit" class="wf-screen">
+                <div class="wf-row-between">
+                  <div class="mono">OPERATIONS &amp; AI USAGE AUDIT</div>
+                  <span class="wf-badge mono">LAST 30 DAYS</span>
+                </div>
+                <div class="wf-audit-table" style="margin-bottom:14px">
+                  <div class="wf-audit-head-row mono"><span>ANALYST</span><span>TASK</span><span>MODEL / TOOL</span><span style="text-align:right">TOKENS</span><span style="text-align:right">COST</span></div>
+                  <div class="wf-audit-body-row"><span style="color:var(--ink)">A. Rao</span><span style="color:var(--muted)">Digital footprint</span><span class="mono" style="color:var(--cyan);font-size:10.5px">GPT-4o &middot; TLOxp</span><span class="mono" style="text-align:right;font-size:10.5px">1,240</span><span class="mono" style="text-align:right;font-size:10.5px;color:var(--ink)">$3.10</span></div>
+                  <div class="wf-audit-body-row"><span style="color:var(--ink)">S. Kaur</span><span style="color:var(--muted)">Litigation trace</span><span class="mono" style="color:var(--cyan);font-size:10.5px">Claude &middot; PACER</span><span class="mono" style="text-align:right;font-size:10.5px">860</span><span class="mono" style="text-align:right;font-size:10.5px;color:var(--ink)">$2.15</span></div>
+                  <div class="wf-audit-body-row"><span style="color:var(--ink)">M. Iqbal</span><span style="color:var(--muted)">Deep-web sweep</span><span class="mono" style="color:var(--cyan);font-size:10.5px">LifeRaft</span><span class="mono" style="text-align:right;font-size:10.5px">2,110</span><span class="mono" style="text-align:right;font-size:10.5px;color:var(--ink)">$5.28</span></div>
+                  <div class="wf-audit-body-row"><span style="color:var(--ink)">A. Rao</span><span style="color:var(--muted)">Entity resolution</span><span class="mono" style="color:var(--cyan);font-size:10.5px">Pipl</span><span class="mono" style="text-align:right;font-size:10.5px">540</span><span class="mono" style="text-align:right;font-size:10.5px;color:var(--ink)">$1.35</span></div>
+                </div>
+                <div class="wf-split" style="grid-template-columns:1.5fr 1fr">
+                  <div class="wf-panel">
+                    <div class="wf-panel-head mono" style="margin-bottom:14px">TOKEN USAGE OVER TIME</div>
+                    <div style="display:flex;align-items:flex-end;gap:7px;height:78px">
+                      <div style="flex:1;height:40%;background:linear-gradient(var(--accent),rgba(47,107,255,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:58%;background:linear-gradient(var(--accent),rgba(47,107,255,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:48%;background:linear-gradient(var(--cyan),rgba(34,211,238,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:74%;background:linear-gradient(var(--cyan),rgba(34,211,238,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:64%;background:linear-gradient(var(--violet),rgba(139,92,246,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:90%;background:linear-gradient(var(--violet),rgba(139,92,246,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:70%;background:linear-gradient(var(--accent),rgba(47,107,255,.2));border-radius:4px 4px 0 0"></div>
+                      <div style="flex:1;height:82%;background:linear-gradient(var(--cyan),rgba(34,211,238,.2));border-radius:4px 4px 0 0"></div>
+                    </div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:10px">
+                    <div class="wf-kpi-card"><div class="wf-kpi-label mono">TOTAL TOKENS</div><div style="font-size:20px;font-weight:700;margin-top:5px">128,540</div></div>
+                    <div class="wf-kpi-card"><div class="wf-kpi-label mono">TOTAL COST</div><div style="font-size:20px;font-weight:700;margin-top:5px;color:var(--cyan)">$312</div></div>
+                    <div class="wf-kpi-card"><div class="wf-kpi-label mono">COST / INVESTIGATION</div><div style="font-size:20px;font-weight:700;margin-top:5px">$26</div></div>
+                  </div>
+                </div>
+                <div class="wf-callout mono" style="top:60px;left:20px;border:1px solid rgba(34,211,238,.45)"><span class="wf-callout-num" style="background:var(--cyan);color:#04121a">1</span><span style="color:var(--cyan)">Who spent what, on which task</span></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal style="margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:24px clamp(20px,3vw,32px);border:1px solid rgba(47,107,255,.3);border-radius:18px;background:linear-gradient(135deg,rgba(47,107,255,.1),rgba(139,92,246,.05))">
+          <div>
+            <h3 style="margin:0 0 6px;font-size:clamp(18px,2vw,24px);font-weight:700;letter-spacing:-.01em">Need this run for you?</h3>
+            <p style="margin:0;font-size:14.5px;line-height:1.55;color:var(--muted);max-width:540px">Tell me your workflow and what you need to know &mdash; I'll scope the research and run it end-to-end, with the audit trail to back every finding.</p>
+          </div>
+          <a href="#contact" data-scroll-to="contact" data-cursor="hover" data-magnetic class="btn-primary" style="white-space:nowrap">Get in touch <span class="mono">&rarr;</span></a>
+        </div>
+        <p data-reveal class="mono" style="margin:18px 0 0;font-size:11px;color:var(--faint);text-align:center">Interactive &mdash; switch modules above &middot; wireframes are lo-fi by intent</p>
+      </div>
+    </section>
+
+    <section id="experience" data-screen-label="Experience">
+      <div class="wrap-narrow">
+        <div data-reveal class="eyebrow">
+          <span class="eyebrow-num mono">05</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">TRAJECTORY</span>
+        </div>
+        <h2 data-reveal class="section-title" style="margin-bottom:52px">Five years &mdash; from the research desk to leading a protective-intelligence desk.</h2>
+        <div class="timeline">
+          <div class="timeline-rail" aria-hidden="true"></div>
+
+          <div data-reveal class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card current">
+              <div class="timeline-meta">
+                <span class="timeline-date mono">JUL 2021 — PRESENT</span>
+                <span class="timeline-current-badge mono"><span class="dot-live" style="width:6px;height:6px"></span>CURRENT</span>
+              </div>
+              <h3>Senior Intelligence Manager</h3>
+              <div class="timeline-org mono" style="color:var(--accent)">Max Security Solutions <span class="place">&middot; Intelligence Analyst &rarr; Intelligence Manager (2022) &rarr; Senior Intelligence Manager (2026) &middot; Mumbai / Remote</span></div>
+              <div class="timeline-bullets">
+                <div><span style="color:var(--accent)">—</span>Single point of contact for critical intelligence across 5+ client portfolios &mdash; own investigations end-to-end, brief clients and leadership, and coordinate cross-functional response to time-sensitive incidents.</div>
+                <div><span style="color:var(--accent)">—</span>Lead OSINT, financial-crime and behavioral-threat investigations across the Middle East, North America and South &amp; South-East Asia &mdash; translating ambiguous signals into decision-ready assessments.</div>
+                <div><span style="color:var(--accent)">—</span>Designed and operate PILOT V23 &mdash; an investigation-workflow, case-logistics and task-level audit system built from the ground up to govern the entire analyst desk.</div>
+                <div><span style="color:var(--accent)">—</span>Own risk-based due diligence and executive vetting; coordinate incident response across clients, vendors and stakeholders; mentor and train junior analysts in OSINT and imagery tradecraft.</div>
+              </div>
+              <div class="timeline-tags"><span class="chip mono">Team leadership</span><span class="chip mono">5+ client desks</span><span class="chip mono">PILOT V23</span></div>
+            </div>
+          </div>
+
+          <div data-reveal data-reveal-delay="80" class="timeline-item">
+            <div class="timeline-dot" style="border-color:var(--violet);box-shadow:0 0 0 5px rgba(139,92,246,.12)"></div>
+            <div class="timeline-card">
+              <div class="timeline-date mono" style="margin-bottom:10px">NOV 2024 — JUL 2025</div>
+              <h3>Protective Intelligence Analyst</h3>
+              <div class="timeline-org mono" style="color:var(--violet)">Emergent Risk International <span class="place">&mdash; Embedded with LinkedIn &mdash; CEO Executive Security team</span></div>
+              <div class="timeline-bullets">
+                <div><span style="color:var(--violet)">—</span>Independent charge of APAC regional threat assessment and person-of-interest (POI) threat management, driving investigations from escalation to resolution.</div>
+                <div><span style="color:var(--violet)">—</span>Assessed executives' digital footprint and advised executive-level security management on mitigation.</div>
+                <div><span style="color:var(--violet)">—</span>Daily threat research and POI case files in ONTIC; partnered with brand strategy on conflict-of-interest.</div>
+              </div>
+              <div class="timeline-tags"><span class="chip mono">ONTIC</span><span class="chip mono">Protective intel</span><span class="chip mono">Digital footprint</span></div>
+            </div>
+          </div>
+
+          <div data-reveal data-reveal-delay="80" class="timeline-item">
+            <div class="timeline-dot" style="border-color:var(--cyan);box-shadow:0 0 0 5px rgba(34,211,238,.1)"></div>
+            <div class="timeline-card">
+              <div class="timeline-date mono" style="margin-bottom:10px">APR 2021 — JUL 2021</div>
+              <h3>Research Assistant</h3>
+              <div class="timeline-org mono" style="color:var(--cyan)">Campbell Collaborations, South Asia <span class="place">&middot; Delhi, India</span></div>
+              <div class="timeline-bullets">
+                <div><span style="color:var(--cyan)">—</span>Systematic literature searches, data synthesis and risk-of-bias assessment for evidence-gap maps and systematic reviews.</div>
+                <div><span style="color:var(--cyan)">—</span>Contributed to reports published for international clients including the UK government and WHO.</div>
+              </div>
+              <div class="timeline-tags"><span class="chip mono">Systematic review</span><span class="chip mono">WHO &middot; UK Gov</span></div>
+            </div>
+          </div>
+
+          <div data-reveal data-reveal-delay="80" class="timeline-item" style="padding-bottom:0">
+            <div class="timeline-dot" style="border-color:var(--faint);box-shadow:0 0 0 5px rgba(255,255,255,.05)"></div>
+            <div class="timeline-card">
+              <div class="timeline-date mono" style="margin-bottom:10px">NOV 2020 — APR 2021</div>
+              <h3>Research Associate</h3>
+              <div class="timeline-org mono" style="color:var(--muted)">Leverage Edu <span class="place">&middot; Delhi, India</span></div>
+              <div class="timeline-bullets">
+                <div><span style="color:var(--faint)">—</span>Built applicant personas through multi-factor analysis for international higher-education admissions.</div>
+                <div><span style="color:var(--faint)">—</span>Compiled research to seed the database behind an AI-driven product.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal class="edu-divider">
+          <span class="mono">EDUCATION</span>
+          <span class="line"></span>
+        </div>
+        <div class="edu-grid">
+          <div data-reveal class="edu-card">
+            <div class="edu-card-top"><h3>MA, Political Science</h3><span class="mono">8.4 CGPA</span></div>
+            <div class="edu-card-sub mono">Jamia Millia Islamia, Delhi &middot; 2019—2021</div>
+            <p>First Division (Upper Class). Specialised in political economy &amp; conflict across MENA and the Southern Caucasus. Thesis on social mobility and identity politics in India.</p>
+          </div>
+          <div data-reveal data-reveal-delay="90" class="edu-card">
+            <div class="edu-card-top"><h3>BA, Political Science</h3><span class="mono">FIRST</span></div>
+            <div class="edu-card-sub mono">University of Delhi &middot; 2016—2019</div>
+            <p>Major in International Relations &amp; conflict studies. Final-year project on internal displacement in Africa — a case study of the Democratic Republic of Congo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" data-screen-label="Certifications">
+      <div class="wrap-narrow">
+        <div data-reveal class="eyebrow" style="margin-bottom:40px">
+          <span class="eyebrow-num mono">06</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">CREDENTIALS</span>
+        </div>
+        <div data-reveal class="cert-hero">
+          <div class="cert-badge">
+            <div class="cert-ring o1"></div>
+            <div class="cert-ring o2"></div>
+            <div class="cert-ring o3"></div>
+            <div class="cert-tick n"></div>
+            <div class="cert-tick s"></div>
+            <div class="cert-tick w"></div>
+            <div class="cert-tick e"></div>
+            <div class="cert-badge-text"><div class="cert-badge-mark">CIATW</div><div class="cert-badge-sub mono">ASIS &middot; INTL</div></div>
+          </div>
+          <div>
+            <span class="cert-eyebrow mono">INTERNATIONAL CERTIFICATION</span>
+            <h2>Corporate Intelligence Analysis, Tradecraft &amp; Writing</h2>
+            <p>Issued by ERI and recognised by ASIS International — a senior-analyst credential aligned with the CPP and APP bodies of knowledge, covering executive protection, security management, investigations and risk assessment.</p>
+            <div class="cert-tags">
+              <span class="cert-tag mono">Aligned &middot; CPP</span>
+              <span class="cert-tag mono">Aligned &middot; APP</span>
+              <span class="cert-tag mono muted">Executive protection</span>
+              <span class="cert-tag mono muted">Investigations</span>
+              <span class="cert-tag mono muted">Risk assessment</span>
+            </div>
+          </div>
+        </div>
+        <div data-reveal class="cert-doc">
+          <div class="cert-doc-head"><span class="mono">CERTIFICATE OF ACHIEVEMENT</span><span class="mono">MAR 2025 &middot; ISSUED BY ERI</span></div>
+          <div class="cert-doc-body"><img src="assets/images/certificate-ciatw.png" alt="Certificate of Achievement — Corporate Intelligence Analysis, Tradecraft &amp; Writing, Emergent Risk International" loading="lazy"></div>
+        </div>
+        <div data-reveal class="cert-misc-grid">
+          <div class="cert-misc-card">
+            <span class="cert-misc-icon mono" style="border:1px solid rgba(34,211,238,.4);color:var(--cyan)">AC</span>
+            <div><div class="cert-misc-title">CAMS</div><div class="cert-misc-sub mono">ACAMS &middot; IN PROGRESS</div></div>
+          </div>
+          <div class="cert-misc-card">
+            <span class="cert-misc-icon mono" style="border:1px solid rgba(139,92,246,.4);color:var(--violet)">W21</span>
+            <div><div class="cert-misc-title">WAVR-21</div><div class="cert-misc-sub mono">BEHAVIORAL THREAT ASSESSMENT</div></div>
+          </div>
+          <div class="cert-misc-card">
+            <span class="cert-misc-icon mono" style="border:1px solid rgba(47,107,255,.4);color:var(--accent)">MA</span>
+            <div><div class="cert-misc-title">MA Political Science</div><div class="cert-misc-sub mono">GEOPOLITICAL / IR FOUNDATION</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" data-screen-label="Case Files">
+      <div class="wrap">
+        <div class="cases-header">
+          <div>
+            <div class="eyebrow" style="margin-bottom:20px">
+              <span class="eyebrow-num mono">07</span>
+              <span class="eyebrow-line"></span>
+              <span class="eyebrow-label mono">CASE FILES</span>
+            </div>
+            <h2>Selected investigations &mdash; redacted.</h2>
+          </div>
+          <span class="cases-badge mono">CLIENTS &amp; SPECIFICS WITHHELD</span>
+        </div>
+        <p data-reveal class="cases-lede">Abstracts only. Names, clients and methods are withheld by design &mdash; request the full brief and I'll walk you through what I can.</p>
+        <div class="cases-grid">
+
+          <div data-reveal data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #PI-118</span><span class="case-type mono" style="color:#ff5f57;border:1px solid rgba(255,95,87,.3)">PROTECTIVE INTEL</span></div>
+            <h3>Grievance actor at a principal's location</h3>
+            <p>A subject posted from outside a client's location. I established criminal history, a firearms licence and a clear grievance &mdash; confirming means, motive and intent, and escalating for protective action.</p>
+            <div class="case-foot"><span class="mono">CLIENT WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="60" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #TA-074</span><span class="case-type mono" style="color:#ff5f57;border:1px solid rgba(255,95,87,.3)">THREAT ASSESSMENT</span></div>
+            <h3>Extremist groups threatening a corporation</h3>
+            <p>Assessed far-left and far-right groups issuing threats of physical violence against a corporate client &mdash; mapping capability, intent and mobilisation to inform protective posture.</p>
+            <div class="case-foot"><span class="mono">CLIENT WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="120" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #BT-039</span><span class="case-type mono" style="color:#8B5CF6;border:1px solid rgba(139,92,246,.3)">WAVR-21</span></div>
+            <h3>Workplace-violence behavioral assessment</h3>
+            <p>Applied WAVR-21 to a workplace-violence concern at a Fortune-100 manufacturer &mdash; assessing pathway-to-violence and online-to-real-world escalation to guide response.</p>
+            <div class="case-foot"><span class="mono">EMPLOYER WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #IN-052</span><span class="case-type mono" style="color:#febc2e;border:1px solid rgba(254,188,46,.3)">INCIDENT</span></div>
+            <h3>Threatening-calls attribution</h3>
+            <p>Ran attribution on a sustained campaign of threatening calls and messages against a client &mdash; establishing the source, pattern and escalation risk behind the harassment.</p>
+            <div class="case-foot"><span class="mono">CLIENT WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="60" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #DD-091</span><span class="case-type mono" style="color:#2F6BFF;border:1px solid rgba(47,107,255,.3)">DUE DILIGENCE</span></div>
+            <h3>Launderers linked to organised crime</h3>
+            <p>Enhanced due diligence on suspected money launderers surfaced ties to Russian organised crime &mdash; delivering reputational-risk intelligence that reshaped the client's decision.</p>
+            <div class="case-foot"><span class="mono">SUBJECTS WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="120" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #FC-006</span><span class="case-type mono" style="color:#2F6BFF;border:1px solid rgba(47,107,255,.3)">FINANCIAL CRIME</span></div>
+            <h3>Cosmos Bank cyber-heist typology</h3>
+            <p>Studied the Cosmos Bank malware and ATM-switch heist (public record) &mdash; reconstructing the attack path and money-movement typology as a reference model.</p>
+            <div class="case-foot"><span class="mono">PUBLIC RECORD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #FC-011</span><span class="case-type mono" style="color:#2F6BFF;border:1px solid rgba(47,107,255,.3)">FINANCIAL CRIME</span></div>
+            <h3>PNB Letters-of-Undertaking fraud</h3>
+            <p>Mapped the Letters-of-Undertaking fraud typology in the PNB / Nirav Modi case (public record) &mdash; how trade-finance controls were bypassed at scale.</p>
+            <div class="case-foot"><span class="mono">PUBLIC RECORD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="60" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #ST-023</span><span class="case-type mono" style="color:#8B5CF6;border:1px solid rgba(139,92,246,.3)">STATE / SANCTIONS</span></div>
+            <h3>DPRK remote IT-worker scheme</h3>
+            <p>Documented DPRK operatives infiltrating hiring and freelance platforms with fabricated identities &mdash; a sanctions-evasion revenue channel, and the weak signals that expose it.</p>
+            <div class="case-foot"><span class="mono">TYPOLOGY BRIEF</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="120" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #FR-047</span><span class="case-type mono" style="color:#febc2e;border:1px solid rgba(254,188,46,.3)">FRAUD</span></div>
+            <h3>Deepfake &amp; BEC executive impersonation</h3>
+            <p>Investigated deepfake- and BEC-driven impersonation of executives used to authorise fraudulent transfers &mdash; the lure, the tell-tales, and the controls that stop it.</p>
+            <div class="case-foot"><span class="mono">CLIENT WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #OS-015</span><span class="case-type mono" style="color:#22D3EE;border:1px solid rgba(34,211,238,.3)">MONITORING</span></div>
+            <h3>Standing reputational-chatter watch</h3>
+            <p>Daily monitoring of social-media chatter around principals &mdash; surfacing how people are referring to them, and catching reputational threats as they form.</p>
+            <div class="case-foot"><span class="mono">ONGOING</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="60" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #OS-028</span><span class="case-type mono" style="color:#22D3EE;border:1px solid rgba(34,211,238,.3)">OSINT / TOOL</span></div>
+            <h3>Synthetic-identity footprint scoring</h3>
+            <p>Built a footprint-scoring capability to flag synthetic identities and fake accounts at onboarding &mdash; account-integrity detection with a working tool behind it.</p>
+            <div class="case-foot"><span class="mono">CAPABILITY</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="120" data-cursor="hover" class="case-card">
+            <div class="case-top"><span class="case-id mono">CASE #RO-061</span><span class="case-type mono" style="color:#22D3EE;border:1px solid rgba(34,211,238,.3)">RAPID OSINT</span></div>
+            <h3>Rapid inquiry &mdash; shooting incident</h3>
+            <p>Fast open-source inquiry into a shooting incident &mdash; establishing facts, actors and client exposure under time pressure to support an immediate response decision.</p>
+            <div class="case-foot"><span class="mono">CLIENT WITHHELD</span><a href="#contact" data-scroll-to="contact" data-cursor="hover" class="mono">FULL BRIEF &rarr;</a></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="writing" data-screen-label="Writing">
+      <div class="wrap">
+        <div class="writing-header">
+          <div>
+            <div class="eyebrow" style="margin-bottom:20px">
+              <span class="eyebrow-num mono">08</span>
+              <span class="eyebrow-line"></span>
+              <span class="eyebrow-label mono">WRITING</span>
+            </div>
+            <h2>Field notes from the threat landscape.</h2>
+            <p>Abstracts below. Want the full piece? Reach out and I'll send it over.</p>
+          </div>
+          <span class="writing-badge mono">ABSTRACTS &middot; FULL PIECES ON REQUEST</span>
+        </div>
+
+        <a href="#contact" data-scroll-to="contact" data-cursor="hover" data-reveal class="writing-feature">
+          <div class="writing-feature-copy">
+            <div>
+              <span class="writing-feature-tag mono">ANALYSIS &middot; FEATURED</span>
+              <h3>The Executive Digital Footprint: Mapping Exposure Before Adversaries Do</h3>
+              <p>How to inventory, score and systematically shrink a principal's online attack surface — before it becomes an incident report.</p>
+            </div>
+            <div class="writing-feature-foot mono"><span>JUN 2026 &middot; 9 MIN READ</span><span>Reach out to read &rarr;</span></div>
+          </div>
+          <div class="writing-feature-art">
+            <div class="glow"></div>
+            <div class="lines"><div style="width:60%"></div><div></div></div>
+            <div class="ring">◎</div>
+          </div>
+        </a>
+
+        <div class="writing-grid">
+          <a href="#contact" data-scroll-to="contact" data-cursor="hover" data-reveal class="writing-card">
+            <span class="writing-card-tag mono" style="color:var(--violet)">PLAYBOOK</span>
+            <h3>From Reactive to Anticipatory: A Predictive Threat-Capture Loop</h3>
+            <p>The operating rhythm that moves a desk from chasing alerts to pre-empting them.</p>
+            <div class="writing-card-foot mono"><span>MAY 2026 &middot; 7 MIN</span><span>&rarr;</span></div>
+          </a>
+          <a href="#contact" data-scroll-to="contact" data-cursor="hover" data-reveal data-reveal-delay="80" class="writing-card">
+            <span class="writing-card-tag mono" style="color:var(--cyan)">FIELD NOTES</span>
+            <h3>OSINT Tradecraft: Boolean Beyond the Basics</h3>
+            <p>Query patterns that surface what generic search quietly buries.</p>
+            <div class="writing-card-foot mono"><span>APR 2026 &middot; 6 MIN</span><span>&rarr;</span></div>
+          </a>
+          <a href="#contact" data-scroll-to="contact" data-cursor="hover" data-reveal data-reveal-delay="160" class="writing-card">
+            <span class="writing-card-tag mono" style="color:var(--accent)">BUILD LOG</span>
+            <h3>Why I Built PILOT V23: Unifying the Analyst Toolstack</h3>
+            <p>The frustrations, the architecture, and the case for pay-as-you-use intelligence.</p>
+            <div class="writing-card-foot mono"><span>MAR 2026 &middot; 11 MIN</span><span>&rarr;</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" data-screen-label="Résumé">
+      <div class="wrap-tight">
+        <div data-reveal class="eyebrow">
+          <span class="eyebrow-num mono">09</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">RÉSUMÉ</span>
+        </div>
+        <div data-reveal class="resume-header">
+          <div>
+            <h2>The full record.</h2>
+            <p>The complete r&eacute;sum&eacute; &mdash; OSINT investigations and protective intelligence. Download the PDF, or print this page to a clean copy.</p>
+          </div>
+          <div class="resume-actions">
+            <a href="https://www.linkedin.com/in/shaikh-hyder-ali-ahmed/?skipRedirect=true" target="_blank" rel="noopener" data-cursor="hover" data-magnetic class="btn-outline">LinkedIn <span class="mono">&nearr;</span></a>
+            <button data-print-cv data-cursor="hover" data-magnetic class="btn-grad">Download / Print PDF <span class="mono">&darr;</span></button>
+          </div>
+        </div>
+
+        <div id="resume-doc">
+          <img src="assets/images/resume-page.png" alt="Shaikh Hyder Ali Ahmed — résumé">
+        </div>
+        <p data-reveal class="resume-note mono">&ldquo;Download / Print PDF&rdquo; saves this r&eacute;sum&eacute; as a clean PDF.</p>
+      </div>
+    </section>
+
+    <section id="contact" data-screen-label="Contact">
+      <div class="wrap-narrow">
+        <div data-reveal class="eyebrow" style="margin-bottom:40px">
+          <span class="eyebrow-num mono">10</span>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label mono">CONTACT</span>
+        </div>
+        <div class="contact-grid">
+          <div data-reveal>
+            <h2 class="contact-heading">Have a threat worth getting ahead of?</h2>
+            <p class="contact-lede">Available for protective-intelligence engagements, advisory, and select analyst roles. Let's talk.</p>
+            <div class="contact-list">
+              <a href="mailto:hyder97ali@gmail.com" data-cursor="hover" class="contact-row"><span class="contact-row-label mono">EMAIL</span><span class="contact-row-value">hyder97ali@gmail.com</span></a>
+              <a href="tel:+918595606764" data-cursor="hover" class="contact-row"><span class="contact-row-label mono">PHONE</span><span class="contact-row-value">+91 8595606764</span></a>
+              <a href="https://www.linkedin.com/in/shaikh-hyder-ali-ahmed/?skipRedirect=true" target="_blank" rel="noopener" data-cursor="hover" class="contact-row"><span class="contact-row-label mono">LINKEDIN</span><span class="contact-row-value">shaikh-hyder-ali-ahmed &rarr;</span></a>
+              <div class="contact-row"><span class="contact-row-label mono">LOCATION</span><span class="contact-row-value">Hyderabad, India</span></div>
+            </div>
+            <a href="assets/docs/Shaikh-Hyder-Ali-Ahmed-Resume.pdf" download data-resume data-cursor="hover" data-magnetic class="btn-resume-lg">Download full r&eacute;sum&eacute; <span class="mono">&darr;</span></a>
+          </div>
+          <div data-reveal data-reveal-delay="120">
+            <form id="contact-form" novalidate action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="form-badge"><span class="dot-live" style="width:7px;height:7px"></span><span class="mono">SECURE MESSAGE &middot; TYPICAL REPLY &lt; 24H</span></div>
+              <div class="form-fields">
+                <div class="field">
+                  <label class="mono">NAME</label>
+                  <input data-field="name" name="name" type="text" placeholder="Your name" />
+                  <span data-err="name" class="field-err mono"></span>
+                </div>
+                <div class="field">
+                  <label class="mono">EMAIL</label>
+                  <input data-field="email" name="email" type="email" placeholder="you@organisation.com" />
+                  <span data-err="email" class="field-err mono"></span>
+                </div>
+                <div class="field">
+                  <label class="mono">MESSAGE</label>
+                  <textarea data-field="message" name="message" rows="4" placeholder="What can I help you get ahead of?"></textarea>
+                  <span data-err="message" class="field-err mono"></span>
+                </div>
+                <button data-submit type="submit" class="btn-submit">Send message</button>
+                <div data-success class="form-success"><span style="font-size:16px">✓</span>Message received — I'll be in touch shortly.</div>
+                <div data-form-error class="form-error"><span style="font-size:16px">!</span>Something went wrong — please email me directly instead.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <span class="brand-mark mono">SH</span>
+          <span>Shaikh Hyder Ali Ahmed</span>
+        </div>
+        <p>Protective &amp; risk intelligence — anticipatory threat detection for people who can&rsquo;t afford to be surprised.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-label mono">NAVIGATE</div>
+          <a href="#about" data-scroll-to="about" data-cursor="hover">Profile</a>
+          <a href="#pilot" data-scroll-to="pilot" data-cursor="hover">PILOT V23</a>
+          <a href="#experience" data-scroll-to="experience" data-cursor="hover">Experience</a>
+          <a href="#writing" data-scroll-to="writing" data-cursor="hover">Writing</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-label mono">CONNECT</div>
+          <a href="mailto:hyder97ali@gmail.com" data-cursor="hover">Email</a>
+          <a href="https://www.linkedin.com/in/shaikh-hyder-ali-ahmed/?skipRedirect=true" target="_blank" rel="noopener" data-cursor="hover">LinkedIn</a>
+          <a href="assets/docs/Shaikh-Hyder-Ali-Ahmed-Resume.pdf" download data-resume data-cursor="hover">R&eacute;sum&eacute; &darr;</a>
+          <a href="#hero" data-top data-cursor="hover">Back to top &uarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom mono">
+      <span>&copy; 2026 SHAIKH HYDER ALI AHMED</span>
+      <span>HYDERABAD &middot; 17.3850&deg;N 78.4867&deg;E</span>
+      <span>DESIGN CONCEPT &middot; BUILT FOR SHOWCASE</span>
+    </div>
+  </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
